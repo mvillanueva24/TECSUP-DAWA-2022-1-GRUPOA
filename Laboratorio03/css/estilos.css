@@ -1,0 +1,291 @@
+/* Variables */
+/* :root, me indica que van a funcionar como un grupo de reglas */
+:root {
+    /* --nombrevariable:valor */
+    --color1: #18db70;
+    --color2: #9e3bdb;
+}
+
+/* *, es un selector que aplica a todo, en este caso a todo lo que este dentro del body */
+* {
+    margin: 0;
+    padding: 0;
+    /* arreglo temporal */
+    /* border:grosor tipo color */
+    /*border: 1px solid red;*/
+    /* indica que el tamaño que nosotros indicamos ya sea para ancho o altura considere contenido + padding + borde */
+    box-sizing: border-box;
+    /* cambiar la fuente de todo */
+    /* en caso Open sans no se encuentre, cargará sans-serif */
+    font-family: "Open Sans", sans-serif;
+}
+
+/* clases reutilizables o generales */
+
+header {
+    color: white;
+    position: relative;
+    min-height: 850px; /*img tendrá un absolute*/
+}
+
+section {
+    padding: 30px 0;
+}
+
+button {
+    /*forma*/
+    border-radius: 20px;
+    max-height: 40px;
+    padding: 10px 20px;
+}
+
+h2 {
+    font-weight: 400;
+    margin: 40px 0;
+    font-size: 32px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.btn-white {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+/* cuando el mouse este encima de estos elementos */
+.btn-white:hover {
+    background-color: white;
+    color: gray;
+    /* para que el icono del puntero cambie */
+    cursor: pointer;
+}
+
+.btn_verde {
+    background-color: var(--color1);
+    border: 1px solid var(--color1);
+    color: white;
+    margin-top: 20px;
+}
+
+.btn_verde:hover {
+    background-color: transparent;
+    color: var(--color1);
+}
+
+.gradiente {
+    /* linear-gradient(angulo, color1, color2) */
+    background-image: linear-gradient(45deg, var(--color1), var(--color2));
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* centrar horizontalmente este contenedor */
+    /* margin: arribayabajo costados */
+    margin: 0 auto;
+}
+
+.img_apps {
+    position: absolute;
+    bottom: 0;
+}
+
+/* NUNCA UTILICEN INLINE, INLINE-BLOCK */
+
+/* NAVEGACIÓN */
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* todos los elementos ul dentro de .navegacion */
+/* .navegacion ul */
+.links {
+    display: flex;
+    /* flex-direction:row, por default */
+    /* list-style-type, indica el tipo de viñeta, es removerla al ponerle none */
+    list-style-type: none;
+    align-items: center;
+}
+
+.links li {
+    margin: 0 10px;
+}
+
+/* 	HERO */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+}
+
+.hero h1,
+h5 {
+    margin: 10px;
+}
+
+.hero h1 {
+    /* text-align me permite indicar la alineación del texto */
+    text-align: center;
+    font-weight: 700;
+    font-size: 54px;
+}
+
+/* CARACTERISTICAS */
+
+.caracteristicas h2 {
+    /* Texto */
+    text-align: center;
+}
+
+.tarjetas {
+    display: flex;
+}
+
+.tarjeta {
+    margin: 10px;
+    padding: 40px 50px;
+    border-radius: 10px;
+    /* box-shadow: despX despY difuminado color */
+    box-shadow: 0 0 20px gray;
+}
+
+/* todos los elementos que esten dentro de .tarjeta */
+.tarjeta * {
+    margin: 5px 0;
+}
+
+.tarjeta img {
+    width: 60px;
+}
+
+.tarjeta p {
+    font-size: 14px;
+    /* line-height - indica el espaciado entre lineas de texto */
+    line-height: 32px;
+}
+
+/* pseudoclase */
+/* nth-of-type(numero) */
+.tarjeta:nth-of-type(2) {
+    color: white;
+}
+
+/* FUNCIONALIDADES */
+
+.funcionalidades {
+    display: flex;
+}
+
+/* , funciona como y */
+.func_descripcion,
+.func_imagen {
+    padding: 20px;
+    max-width: 50%;
+}
+
+.func_imagen img {
+    max-width: 100%;
+}
+
+/* REGISTRARSE */
+.registrate {
+    /* .. salir de la carpeta */
+    background-image: url("../assets/img/background2.webp");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px;
+    position: relative;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*opacity: 0 a 1*/
+    opacity: 0.5;
+}
+
+.accion {
+    position: relative;
+}
+
+/* Modal */
+.modal {
+    display: none; /*quiero que este escondido*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* rgba(0-255, 0-255, 0-255, 0-1) */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid gray;
+    width: 80%;
+}
+
+.busqueda {
+    padding: 40px;
+    display: flex;
+}
+
+.canciones {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cancion-container {
+    padding: 20px;
+    max-width: 20%;
+    /* height: 600px; */
+    /* overflow-y: auto; */
+}
+
+.cancion {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+.cancion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cancion-img img {
+    width: 100%;
+}
+
+audio {
+    width: 100%;
+}
+
+/* -------------media queries----------------- */
+@media screen and (max-width: 800px) {
+    .tarjetas {
+        flex-direction: column;
+    }
+}

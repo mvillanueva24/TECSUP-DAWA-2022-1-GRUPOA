@@ -1,0 +1,158 @@
+<!-- Va a indicar la V. de HTML en este caso la 5 -->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- información técnica, navegador, buscadores -->
+        <!-- Disclaimer, solo voy a hacer las partes estrictamente más importantes -->
+        <meta charset="UTF-8" />
+        <title>CodiMusic</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- font-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+            integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- agregamos nuestro css -->
+        <link rel="stylesheet" href="css/estilos.css" />
+    </head>
+    <body>
+        <!-- class ? -->
+        <!-- nos va a servir más adelante para identificar etiquetas ó grupos de etiquetas-->
+        <header class="gradiente">
+            <nav class="navegacion contenedor">
+                <h2 class="logo"><i class="fas fa-headphones-alt"></i>CodiMusic</h2>
+                <!-- unordered list, lista desordenada -->
+                <ul class="links">
+                    <li>Inicio</li>
+                    <li>Explora</li>
+                    <li>
+                        <button class="btn-white">Regístrate</button>
+                    </li>
+                </ul>
+            </nav>
+            <!-- hero -->
+            <section class="hero">
+                <!-- h1 ... h6 -->
+                <h1>Codimusic: Escucha música desde cualquier lugar</h1>
+                <h5>Prueba nuestra aplicación web!</h5>
+                <div>
+                    <button class="btn-white">Get Started</button>
+                    <button class="btn-white" id="btnPrueba">Prueba Gratis</button>
+                </div>
+                <img src="assets/img/visual_desktop.png" alt="imagen apps" class="img_apps" />
+            </section>
+        </header>
+
+        <!-- main - principal -->
+        <main>
+            <div class="contenedor">
+                <!-- caracteristicas -->
+                <section class="caracteristicas">
+                    <h2>CodiMusic ha sido construido especialmente para tí</h2>
+                    <div class="tarjetas">
+                        <!-- tarjeta -->
+                        <div class="tarjeta">
+                            <img src="assets/img/idea.png" alt="icon_idea" />
+                            <h4>Descubre</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa error beatae
+                                perspiciatis expedita tempora labore corporis voluptatem molestias quod.
+                            </p>
+                            <a href="#">Conocer más</a>
+                        </div>
+                        <!-- tarjeta -->
+                        <div class="tarjeta gradiente">
+                            <img src="assets/img/atom.png" alt="icon_idea" />
+                            <h4>Descubre</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa error beatae
+                                perspiciatis expedita tempora labore corporis voluptatem molestias quod.
+                            </p>
+                            <a href="#">Conocer más</a>
+                        </div>
+                        <!-- tarjeta -->
+                        <div class="tarjeta">
+                            <img src="assets/img/iconscreen.png" alt="icon_idea" />
+                            <h4>Descubre</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa error beatae
+                                perspiciatis expedita tempora labore corporis voluptatem molestias quod.
+                            </p>
+                            <a href="#">Conocer más</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- funcionalidades -->
+            <div class="contenedor">
+                <section class="funcionalidades">
+                    <div class="func_descripcion">
+                        <!-- texto -->
+                        <h2>Descubre canciones en todo momento</h2>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima necessitatibus facilis
+                            aliquid voluptas ad, impedit modi veritatis tempora mollitia corporis iusto non placeat
+                            perferendis quae deleniti voluptatum, assumenda ipsum nisi.
+                        </p>
+                        <button class="btn_verde">Descubre!</button>
+                    </div>
+                    <div class="func_imagen">
+                        <img src="assets/img/mini_screen.png" />
+                    </div>
+                </section>
+            </div>
+
+            <!-- registrate -->
+            <section class="registrate">
+				<div class="mascara gradiente"></div>
+                <div class="contenedor accion">
+                    <h2>Regístrate con nosotros</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, quas sed officiis eius,
+                        labore voluptates nesciunt, molestiae minus odio repudiandae assumenda nobis dicta. Autem sunt
+                        praesentium suscipit, consequatur quia dicta?
+                    </p>
+                    <form>
+                        <input type="email" placeholder="Ingrese su email" />
+                        <button type="submit" class="btn_verde">Registrate</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+		<!-- Estructura del Modal -->
+		<!-- modal - parte gris -->
+		<!-- class => css, id=> Javascript -->
+		<div id="miModal" class="modal">
+			<!-- modal-content - contenido del modal -->
+			<div class="modal-content">
+				<span 
+				class="cerrar" 
+				id="btnCerrar"
+				>
+					X
+				</span>
+				<div class="busqueda">
+					<input type="text" id="inputBusqueda" placeholder="Ej. X DINERO">
+					<button class="btn_verde" id="btnBusqueda">Buscar</button>
+				</div>
+				<!-- canciones - van a aparecer las canciones despues -->
+				<div class="canciones" id="divCanciones">
+
+				</div>
+			</div>
+		</div>
+
+		<!-- javascript -->
+		<script src="js/app.js"></script>
+    </body>
+</html>
