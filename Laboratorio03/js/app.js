@@ -69,8 +69,8 @@ const buscarDeezer = async (busqueda) => {
         const datos = await respuesta.json();
         console.log(datos.data);
         if (datos.data.length === 0){
-            window.open("/404.html")
-            window.close("/index.html")
+            window.open("404.html")
+            window.close("index.html")
         }
         dibujarCanciones(datos.data);
     } catch (error) {
